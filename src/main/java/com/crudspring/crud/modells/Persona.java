@@ -7,9 +7,10 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity(name = "tbPersona")
+@Entity(name = "Persona_tb")
 @Getter
 @Setter
+
     public class Persona {
         @Id
         private Long numDocumento;

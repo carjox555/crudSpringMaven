@@ -10,10 +10,12 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Service
 public class PersonaServiceImpl implements IntPersonaService{
-    private PersonaRepository personaRepository;
+
+    private final PersonaRepository personaRepository;
     @Override
     public Persona newPersona(Persona newPersona) {
-        return personaRepository.save(newPersona);
+
+        return personaRepository.save (newPersona);
     }
 
     @Override
@@ -22,10 +24,10 @@ public class PersonaServiceImpl implements IntPersonaService{
     }
 
     @Override
-    public Persona modifyPErsona(Persona persona) {
+    public Persona modifyPersona(Persona persona) {
         //Saber si esta dento de la BD
         Optional<Persona> personaEncontrada=this.personaRepository.findById(persona.getNumDocumento());
-        if(personaEncontrada.get() != null){
+        if(personaEncontrada.isPresent()){
             personaEncontrada.get().setNombre(persona.getNombre());
             personaEncontrada.get().setApellido(persona.getApellido());
             personaEncontrada.get().setEmail(persona.getEmail());
