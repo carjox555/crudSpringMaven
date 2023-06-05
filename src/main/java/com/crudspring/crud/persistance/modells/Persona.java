@@ -1,4 +1,4 @@
-package com.crudspring.crud.modells;
+package com.crudspring.crud.persistance.modells;
 
 
 import jakarta.persistence.Column;

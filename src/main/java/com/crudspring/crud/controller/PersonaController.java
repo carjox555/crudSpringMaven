@@ -1,6 +1,6 @@
 package com.crudspring.crud.controller;
 
-import com.crudspring.crud.modells.Persona;
+import com.crudspring.crud.persistance.modells.Persona;
 import com.crudspring.crud.service.IntPersonaService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;

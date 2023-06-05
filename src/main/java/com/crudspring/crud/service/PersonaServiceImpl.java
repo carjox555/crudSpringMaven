@@ -1,6 +1,6 @@
 package com.crudspring.crud.service;
 
-import com.crudspring.crud.modells.Persona;
+import com.crudspring.crud.persistance.modells.Persona;
 import com.crudspring.crud.repository.PersonaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -27,7 +27,7 @@ public class PersonaServiceImpl implements IntPersonaService{
     public Persona modifyPersona(Persona persona) {
         //Saber si esta dento de la BD
         Optional<Persona> personaEncontrada=this.personaRepository.findById(persona.getNumDocumento());
-        if(personaEncontrada.isPresent()){
+        if(personaEncontrada.isEmpty()){
             personaEncontrada.get().setNombre(persona.getNombre());
             personaEncontrada.get().setApellido(persona.getApellido());
             personaEncontrada.get().setEmail(persona.getEmail());

@@ -1,6 +1,6 @@
 package com.crudspring.crud.service;
 
-import com.crudspring.crud.modells.Persona;
+import com.crudspring.crud.persistance.modells.Persona;
 
 
 public interface IntPersonaService {
