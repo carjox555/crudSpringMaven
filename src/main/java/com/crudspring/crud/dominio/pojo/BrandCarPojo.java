@@ -1,4 +1,4 @@
-package com.crudspring.crud.dominio;
+package com.crudspring.crud.dominio.pojo;
 
 import lombok.Getter;
 import lombok.Setter;

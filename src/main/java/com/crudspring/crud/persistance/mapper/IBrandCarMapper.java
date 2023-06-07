@@ -1,6 +1,6 @@
 package com.crudspring.crud.persistance.mapper;
 
-import com.crudspring.crud.dominio.BrandCarPojo;
+import com.crudspring.crud.dominio.pojo.BrandCarPojo;
 import com.crudspring.crud.persistance.modells.BrandCarEntity;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;

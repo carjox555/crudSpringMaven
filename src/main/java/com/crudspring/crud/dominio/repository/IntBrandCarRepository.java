@@ -1,0 +1,34 @@
+package com.crudspring.crud.dominio.repository;
+
+import com.crudspring.crud.dominio.pojo.BrandCarPojo;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface IntBrandCarRepository {
+    /**
+     * Devuelve una lista con todas las marcas de coches
+     * @return lista con marcas de coches
+     */
+    List<BrandCarPojo>getAll();
+
+    /**
+     * Devuelve una marca de coche por su Id
+     * @param id
+     * @return
+     */
+    Optional<BrandCarPojo>getBrandCar(Integer id);
+
+    /**
+     * Guarda una nueva marca de coche
+     * @param newBrandCar MArca coche a Guardar
+     * @return Marca coche guardada
+     */
+    BrandCarPojo save (BrandCarPojo newBrandCar);
+
+    /**
+     * Elimina una marca coche dada su id
+     * @param idBrandCar Id de la marca coche
+     */
+    void delete(Integer idBrandCar);
+}
