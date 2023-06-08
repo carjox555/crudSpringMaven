@@ -50,6 +50,11 @@ public class BrandCarController {
         }
     }
 
+    /**
+     *
+     * @param brandCarPojoUpdate recibe marca a actualzar
+     * @return marca actualizada
+     */
     @PutMapping()
     public ResponseEntity<BrandCarPojo>update(@RequestBody BrandCarPojo brandCarPojoUpdate){
         return ResponseEntity.status(HttpStatus.OK)
