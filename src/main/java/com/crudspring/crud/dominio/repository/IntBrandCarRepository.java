@@ -30,5 +30,5 @@ public interface IntBrandCarRepository {
      * Elimina una marca coche dada su id
      * @param idBrandCar Id de la marca coche
      */
-    public boolean delete(Integer idBrandCar);
+    public void delete(Integer idBrandCar);
 }

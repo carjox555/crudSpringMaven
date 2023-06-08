@@ -6,7 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
-
+/*
 @RequiredArgsConstructor
 @Service
 public class PersonaServiceImpl implements IntPersonaService{
@@ -43,3 +43,5 @@ public class PersonaServiceImpl implements IntPersonaService{
         return true;
     }
 }
+
+ */

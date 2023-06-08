@@ -4,7 +4,6 @@ import com.crudspring.crud.dominio.pojo.BrandCarPojo;
 import com.crudspring.crud.dominio.repository.IntBrandCarRepository;
 import com.crudspring.crud.persistance.mapper.IBrandCarMapper;
 import com.crudspring.crud.persistance.modells.BrandCarEntity;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,7 +13,7 @@ import java.util.Optional;
  * Repositorio de marca coche
  */
 @Repository
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 public class ImpBrandCarRepository implements IntBrandCarRepository {
     /**
      * Crud de marca coche
@@ -25,6 +24,12 @@ public class ImpBrandCarRepository implements IntBrandCarRepository {
      */
 
     private final IBrandCarMapper iBrandCarMapper;
+
+    public ImpBrandCarRepository(IntBrandCarCrudRepository intBrandCarCrudRepository, IBrandCarMapper iBrandCarMapper) {
+        this.intBrandCarCrudRepository = intBrandCarCrudRepository;
+        this.iBrandCarMapper = iBrandCarMapper;
+    }
+
     @Override
     public List<BrandCarPojo> getAll() {
         return iBrandCarMapper.toBrandsCarPojo(intBrandCarCrudRepository.findAll());
@@ -55,7 +60,7 @@ public class ImpBrandCarRepository implements IntBrandCarRepository {
      * @param idBrandCar Id de la marca coche
      */
     @Override
-    public boolean delete(Integer idBrandCar) {
+    public void delete(Integer idBrandCar) {
     intBrandCarCrudRepository.deleteById(idBrandCar);
     }
 }

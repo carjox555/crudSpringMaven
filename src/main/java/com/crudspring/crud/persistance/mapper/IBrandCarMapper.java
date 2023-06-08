@@ -19,9 +19,8 @@ public interface IBrandCarMapper {
      @param brandEntity Entidad a convertir
      @return Pojo convertido
      */
-    @Mapping(source ="id", target = "id")
-    BrandCarPojo toBrandCarPojo (BrandCarEntity brandEntity);
 
+    BrandCarPojo toBrandCarPojo (BrandCarEntity brandEntity);
 
     /**
      * convierte un pojo a entidad de marca coche
