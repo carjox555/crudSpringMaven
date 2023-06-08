@@ -55,7 +55,7 @@ public class ImpBrandCarRepository implements IntBrandCarRepository {
      * @param idBrandCar Id de la marca coche
      */
     @Override
-    public void delete(Integer idBrandCar) {
+    public boolean delete(Integer idBrandCar) {
     intBrandCarCrudRepository.deleteById(idBrandCar);
     }
 }
